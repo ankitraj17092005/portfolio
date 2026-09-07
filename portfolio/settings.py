@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-3synmfra*e%5+ev1ye4d9th0bmdr#a(wp@9c$4778^$!8zr&ii
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [https://portfolioankit-ha21.onrender.com/]
 
 
 # Application definition
@@ -88,7 +88,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
-SITE_ID=4
+SITE_ID=5
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
