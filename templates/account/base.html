@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>{% block head_title %}Authentication{% endblock %} | Portfolio</title>
+
+    <link rel="stylesheet"
+          href="{% static 'home/css/auth.css' %}">
+</head>
+
+<body>
+
+<div class="auth-page">
+
+    <!-- Background decoration -->
+    <div class="bg-decoration bg-one"></div>
+    <div class="bg-decoration bg-two"></div>
+
+    <!-- Header -->
+    <header class="auth-header">
+
+        <a href="/" class="brand">
+            <span class="brand-icon">&lt;/&gt;</span>
+            <span>Portfolio</span>
+        </a>
+
+        <button
+            type="button"
+            class="theme-btn"
+            id="themeToggle"
+            aria-label="Toggle theme"
+        >
+            ☀️
+        </button>
+
+    </header>
+
+
+    <!-- Main -->
+    <main class="auth-main">
+
+        <div class="auth-card">
+
+            {% if messages %}
+                <div class="messages">
+
+                    {% for message in messages %}
+                        <div class="message {{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+
+                </div>
+            {% endif %}
+
+
+            {% block content %}
+            {% endblock %}
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="auth-footer">
+
+        <span>
+            © {% now "Y" %} Portfolio
+        </span>
+
+        <span>•</span>
+
+        <a href="/">
+            Back to portfolio
+        </a>
+
+    </footer>
+
+</div>
+
+
+<script src="{% static 'home/js/auth.js' %}"></script>
+
+{% block extra_js %}
+{% endblock %}
+
+</body>
+</html>

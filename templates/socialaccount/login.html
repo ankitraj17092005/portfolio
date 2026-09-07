@@ -1,0 +1,81 @@
+{% extends "account/base.html" %}
+{% load i18n %}
+{% load socialaccount %}
+
+{% block head_title %}
+    {% trans "Sign In" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="auth-heading">
+
+    <div class="auth-logo">
+        {% if provider.id == "google" %}
+            <span>G</span>
+        {% elif provider.id == "github" %}
+            <span>GH</span>
+        {% else %}
+            <span>↗</span>
+        {% endif %}
+    </div>
+
+    <h1>
+        {% if provider.id == "google" %}
+            Continue with Google
+        {% elif provider.id == "github" %}
+            Continue with GitHub
+        {% else %}
+            Continue with {{ provider.name }}
+        {% endif %}
+    </h1>
+
+    <p>
+        You're signing in to your Portfolio account.
+    </p>
+
+</div>
+
+
+<div class="info-box">
+
+    <strong>Secure authentication</strong>
+
+    {% blocktrans with provider.name as provider_name %}
+        You are about to sign in using your {{ provider_name }} account.
+    {% endblocktrans %}
+
+</div>
+
+
+<form method="post" class="auth-form">
+
+    {% csrf_token %}
+
+    <button
+        type="submit"
+        class="primary-btn"
+    >
+        {% if provider.id == "google" %}
+            Continue with Google
+        {% elif provider.id == "github" %}
+            Continue with GitHub
+        {% else %}
+            Continue with {{ provider.name }}
+        {% endif %}
+    </button>
+
+</form>
+
+
+<div class="switch-auth">
+
+    <span>Changed your mind?</span>
+
+    <a href="/">
+        Back to portfolio
+    </a>
+
+</div>
+
+{% endblock %}

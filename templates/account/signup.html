@@ -1,0 +1,127 @@
+{% extends "account/base.html" %}
+{% load socialaccount %}
+
+{% block head_title %}
+Create account
+{% endblock %}
+
+
+{% block content %}
+
+<div class="auth-heading">
+
+    <div class="auth-logo">
+        🚀
+    </div>
+
+    <h1>Create account</h1>
+
+    <p>
+        Build your profile and showcase your work.
+    </p>
+
+</div>
+
+
+<div class="social-buttons">
+
+    <a
+        href="{% provider_login_url 'google' %}"
+        class="social-btn google-btn"
+    >
+        <span class="social-icon">G</span>
+
+        <span>
+            Sign up with Google
+        </span>
+    </a>
+
+
+    <a
+        href="{% provider_login_url 'github' %}"
+        class="social-btn github-btn"
+    >
+        <span class="social-icon github-icon">
+            Git
+        </span>
+
+        <span>
+            Sign up with GitHub
+        </span>
+    </a>
+
+</div>
+
+
+<div class="divider">
+    <span>or create account with email</span>
+</div>
+
+
+<form
+    method="POST"
+    action="{% url 'account_signup' %}"
+    class="auth-form"
+>
+
+    {% csrf_token %}
+
+
+    {% if form.non_field_errors %}
+
+        <div class="form-error-box">
+            {{ form.non_field_errors }}
+        </div>
+
+    {% endif %}
+
+
+    {% for field in form %}
+
+        <div class="form-group">
+
+            <label for="{{ field.id_for_label }}">
+                {{ field.label }}
+            </label>
+
+            {{ field }}
+
+            {% if field.help_text %}
+                <small class="field-help">
+                    {{ field.help_text|safe }}
+                </small>
+            {% endif %}
+
+            {% if field.errors %}
+                <div class="field-error">
+                    {{ field.errors }}
+                </div>
+            {% endif %}
+
+        </div>
+
+    {% endfor %}
+
+
+    <button
+        type="submit"
+        class="primary-btn"
+    >
+        Create account
+        <span>→</span>
+    </button>
+
+</form>
+
+
+<div class="switch-auth">
+
+    <span>Already have an account?</span>
+
+    <a href="{% url 'account_login' %}">
+        Login
+    </a>
+
+</div>
+
+{% endblock %}

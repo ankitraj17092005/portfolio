@@ -1,0 +1,274 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        Available for new opportunities
+      </p>
+
+      <h1 class="hero-title">
+        Ankit Raj<br>
+        <span class="hero-title__role">Python & Full-Stack Developer</span>
+      </h1>
+
+      <p class="hero-tagline">
+        I build reliable web apps end to end — from the Django backend to the last pixel of the interface.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn--primary">Get in touch</a>
+        <a href="#gallery" class="btn btn--ghost">See the work</a>
+      </div>
+
+      <p class="hero-meta">Delhi, India · Immediate joiner · Open to relocation</p>
+    </div>
+
+    <div class="hero-terminal" aria-hidden="true">
+      <div class="terminal-window">
+        <div class="terminal-bar">
+          <span class="terminal-dot terminal-dot--red"></span>
+          <span class="terminal-dot terminal-dot--yellow"></span>
+          <span class="terminal-dot terminal-dot--green"></span>
+          <span class="terminal-title">manage.py</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> python manage.py runserver</p>
+          <p class="terminal-muted">Watching for file changes with StatReloader</p>
+          <p class="terminal-muted">Django version 5.0, using settings 'devfolio'</p>
+          <p class="terminal-accent">Starting development server at http://127.0.0.1:8000/</p>
+          <p>&nbsp;</p>
+          <p><span class="prompt">$</span> whoami</p>
+          <p class="terminal-out">ankit-raj · python &amp; full-stack developer</p>
+          <p class="terminal-cursor"><span class="prompt">$</span> <span class="blink">_</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="skills" id="skills">
+  <div class="section-inner">
+    <h2 class="section-title">Skills</h2>
+    <p class="section-lede">Tools I reach for most, grouped by where they sit in a project.</p>
+
+    <div class="skills-grid">
+
+      <div class="skill-group">
+        <h3 class="skill-group__title">backend</h3>
+        <ul class="skill-list">
+          <li class="skill-item">
+            <div class="skill-item__row"><span class="skill-item__name">Python</span><span class="skill-item__value">90%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--fill:90%"></div></div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-item__row"><span class="skill-item__name">Django</span><span class="skill-item__value">88%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--fill:88%"></div></div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-item__row"><span class="skill-item__name">Django REST Framework</span><span class="skill-item__value">80%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--fill:80%"></div></div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-item__row"><span class="skill-item__name">REST APIs</span><span class="skill-item__value">85%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--fill:85%"></div></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-group__title">frontend</h3>
+        <ul class="skill-list">
+          <li class="skill-item">
+            <div class="skill-item__row"><span class="skill-item__name">JavaScript</span><span class="skill-item__value">75%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--fill:75%"></div></div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-item__row"><span class="skill-item__name">HTML5 & CSS3</span><span class="skill-item__value">85%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--fill:85%"></div></div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-item__row"><span class="skill-item__name">Bootstrap</span><span class="skill-item__value">78%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--fill:78%"></div></div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-item__row"><span class="skill-item__name">jQuery</span><span class="skill-item__value">70%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--fill:70%"></div></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-group__title">database</h3>
+        <ul class="skill-list">
+          <li class="skill-item">
+            <div class="skill-item__row"><span class="skill-item__name">SQLite</span><span class="skill-item__value">82%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--fill:82%"></div></div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-item__row"><span class="skill-item__name">MySQL</span><span class="skill-item__value">75%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--fill:75%"></div></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-group__title">tools & platforms</h3>
+        <ul class="skill-list">
+          <li class="skill-item">
+            <div class="skill-item__row"><span class="skill-item__name">Git & GitHub</span><span class="skill-item__value">85%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--fill:85%"></div></div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-item__row"><span class="skill-item__name">Postman</span><span class="skill-item__value">80%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--fill:80%"></div></div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-item__row"><span class="skill-item__name">Linux / Deployment</span><span class="skill-item__value">65%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--fill:65%"></div></div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY / PROJECTS ============ -->
+<section class="gallery" id="gallery">
+  <div class="section-inner">
+    <h2 class="section-title">Gallery</h2>
+    <p class="section-lede">A selection of things I've built, end to end.</p>
+
+    <div class="filter-tabs" id="filterTabs" role="tablist">
+      <button class="filter-tab is-active" data-filter="all" type="button">All</button>
+      <button class="filter-tab" data-filter="Web App" type="button">Web App</button>
+      <button class="filter-tab" data-filter="API / Backend" type="button">API / Backend</button>
+      <button class="filter-tab" data-filter="Automation / Script" type="button">Automation / Script</button>
+    </div>
+
+    <div class="project-list" id="projectList">
+
+      <article class="project-row project-row--left" data-category="API / Backend">
+        <div class="project-row__media">
+          <div class="project-row__placeholder"><span>TM</span></div>
+        </div>
+        <div class="project-row__body">
+          <p class="project-row__category">API / Backend</p>
+          <h3 class="project-row__title">Task Manager API</h3>
+          <p class="project-row__desc">A REST API for managing tasks and projects, with JWT authentication, role-based permissions, and filtering/search built on Django REST Framework.</p>
+          <ul class="tech-tags"><li>Django</li><li>DRF</li><li>SQLite</li><li>JWT</li></ul>
+          <div class="project-row__links">
+            <a href="#" target="_blank" rel="noopener">Code</a>
+            <a href="#" target="_blank" rel="noopener">Live demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-row project-row--right" data-category="Web App">
+        <div class="project-row__media">
+          <div class="project-row__placeholder"><span>EC</span></div>
+        </div>
+        <div class="project-row__body">
+          <p class="project-row__category">Web App</p>
+          <h3 class="project-row__title">E-Commerce Storefront</h3>
+          <p class="project-row__desc">A full-stack shopping site with a product catalog, cart, and checkout flow, plus an admin dashboard for managing inventory and orders.</p>
+          <ul class="tech-tags"><li>Django</li><li>Bootstrap</li><li>SQLite</li><li>JavaScript</li></ul>
+          <div class="project-row__links">
+            <a href="#" target="_blank" rel="noopener">Code</a>
+            <a href="#" target="_blank" rel="noopener">Live demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-row project-row--left" data-category="Automation / Script">
+        <div class="project-row__media">
+          <div class="project-row__placeholder"><span>AT</span></div>
+        </div>
+        <div class="project-row__body">
+          <p class="project-row__category">Automation / Script</p>
+          <h3 class="project-row__title">Attendance Automation Tool</h3>
+          <p class="project-row__desc">A script that reads attendance sheets, applies company rules, and emails a daily summary report automatically — cutting a manual task to zero.</p>
+          <ul class="tech-tags"><li>Python</li><li>Pandas</li><li>SMTP</li></ul>
+          <div class="project-row__links">
+            <a href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-row project-row--right" data-category="Web App">
+        <div class="project-row__media">
+          <div class="project-row__placeholder"><span>BP</span></div>
+        </div>
+        <div class="project-row__body">
+          <p class="project-row__category">Web App</p>
+          <h3 class="project-row__title">Blog Publishing Platform</h3>
+          <p class="project-row__desc">A Markdown-based blogging platform with tags, search, and a comment system, deployed with a clean editorial reading experience.</p>
+          <ul class="tech-tags"><li>Django</li><li>SQLite</li><li>HTML/CSS</li></ul>
+          <div class="project-row__links">
+            <a href="#" target="_blank" rel="noopener">Code</a>
+            <a href="#" target="_blank" rel="noopener">Live demo</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="section-inner contact-inner">
+    <div class="contact-info">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-lede">Have a role or a project in mind? Send a note — I read every message myself.</p>
+
+      <dl class="contact-details">
+        <div>
+          <dt>Email</dt>
+          <dd><a href="mailto:ankit.raj@example.com">ankit.raj@example.com</a></dd>
+        </div>
+        <div>
+          <dt>Location</dt>
+          <dd>Delhi, India</dd>
+        </div>
+      </dl>
+
+      <div class="footer-socials contact-socials">
+        <a href="#" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Twitter</a>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-field">
+        <input type="text" id="fieldName" name="name" placeholder=" " required>
+        <label for="fieldName">Name</label>
+      </div>
+      <div class="form-field">
+        <input type="email" id="fieldEmail" name="email" placeholder=" " required>
+        <label for="fieldEmail">Email</label>
+      </div>
+      <div class="form-field">
+        <input type="text" id="fieldSubject" name="subject" placeholder=" ">
+        <label for="fieldSubject">Subject (optional)</label>
+      </div>
+      <div class="form-field">
+        <textarea id="fieldMessage" name="message" rows="5" placeholder=" " required></textarea>
+        <label for="fieldMessage">Message</label>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--form">Send message</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

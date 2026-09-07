@@ -1,0 +1,62 @@
+{% extends "account/base.html" %}
+
+{% block head_title %}
+Logout
+{% endblock %}
+
+
+{% block content %}
+
+<div class="auth-heading">
+
+    <div class="auth-logo">
+        👋
+    </div>
+
+    <h1>Ready to leave?</h1>
+
+    <p>
+        Are you sure you want to log out of your account?
+    </p>
+
+</div>
+
+
+<form
+    method="POST"
+    action="{% url 'account_logout' %}"
+    class="auth-form"
+>
+
+    {% csrf_token %}
+
+    {% if redirect_field_value %}
+
+        <input
+            type="hidden"
+            name="{{ redirect_field_name }}"
+            value="{{ redirect_field_value }}"
+        >
+
+    {% endif %}
+
+
+    <button
+        type="submit"
+        class="primary-btn danger-btn"
+    >
+        Logout
+    </button>
+
+</form>
+
+
+<div class="switch-auth">
+
+    <a href="/">
+        Cancel and return home
+    </a>
+
+</div>
+
+{% endblock %}
